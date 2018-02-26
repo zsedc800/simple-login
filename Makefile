@@ -4,7 +4,7 @@ install:
 	npm install
 build: install
 	node build/build.js
-test: unit test-report codecov
+test: unit test-report
 unit:
 	@NODE_ENV=test \
 	node ./node_modules/.bin/mocha \

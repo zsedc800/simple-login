@@ -1,0 +1,91 @@
+{
+  "name": "simple-login",
+  "version": "1.0.1",
+  "description": "simplify login operation",
+  "main": "dist/simple-login.min.js",
+  "module": "dist/simple-login.esm.js",
+  "scripts": {
+    "test": "make test",
+    "dev": "node build/dev-server.js",
+    "build": "NODE_ENV=prod node build/build.js"
+  },
+  "keywords": [
+    "login",
+    "umd"
+  ],
+  "repository": {
+    "url": "git@gitlab.ximalaya.com:FEM/simple-login.git"
+  },
+  "author": "joe.zhou",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-istanbul": "^4.1.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "css-loader": "^0.28.9",
+    "eslint": "^4.16.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-html": "^4.0.2",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.6.1",
+    "eslint-plugin-standard": "^3.0.1",
+    "eventsource-polyfill": "^0.9.6",
+    "express": "^4.16.2",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "friendly-errors-webpack-plugin": "^1.6.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^2.30.1",
+    "istanbul": "^1.0.0-alpha.2",
+    "mocha": "^5.0.0",
+    "node-sass": "^4.7.2",
+    "nyc": "^11.4.1",
+    "opn": "^5.2.0",
+    "rollup": "^0.55.3",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-node-resolve": "^3.0.2",
+    "sass": "^1.0.0-beta.4",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.20.1",
+    "uglify-js": "^3.3.9",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-middleware": "^2.0.4",
+    "webpack-dev-server": "^2.11.1",
+    "webpack-hot-middleware": "^2.21.0",
+    "webpack-merge": "^4.1.1",
+    "webpack-node-externals": "^1.6.0",
+    "zlib": "^1.0.5"
+  },
+  "dependencies": {
+    "jsencrypt": "^2.3.1",
+    "md5": "^2.2.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "qs": "^6.5.1"
+  },
+  "nyc": {
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": false,
+    "instrument": false,
+    "reporter": [
+      "lcov",
+      "text",
+      "json"
+    ],
+    "report-dir": "./test/coverage"
+  }
+}
